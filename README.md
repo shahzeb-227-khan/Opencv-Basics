@@ -100,10 +100,13 @@ Press **`d`** to stop the video capture and close the windows.
 python draw.py
 ```
 
-Creates a blank 500×500 black canvas and displays:
-- `Blank` — the original black canvas.
-- `Green` — the canvas filled with solid green.
-- `Rectangle` — a red rectangle drawn from the top-left corner `(0,0)` to `(250,250)`.
+Creates a blank 500×500 black canvas and opens six windows demonstrating each drawing primitive:
+- `1 - Blank Canvas` — the original black canvas.
+- `2 - Solid Colour (Green)` — the canvas filled with solid green.
+- `3 - Rectangle` — a red rectangle outline on the left half of the canvas.
+- `4 - Circle` — a blue circle centred in the canvas.
+- `5 - Line` — a white diagonal line from the top-left to the centre.
+- `6 - Text` — yellow text written at mid-height.
 
 Press any key to close all windows.
 
