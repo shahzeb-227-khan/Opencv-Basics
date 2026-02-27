@@ -18,10 +18,11 @@ A beginner-friendly Python project that covers the fundamentals of **OpenCV (Ope
 
 ## About
 
-This project demonstrates how to get started with OpenCV in Python. It covers two core concepts:
+This project demonstrates how to get started with OpenCV in Python. It covers three core concepts:
 
 1. **Reading & displaying images** with custom rescaling.
 2. **Capturing & displaying live video** from a webcam with frame resizing and resolution control.
+3. **Drawing shapes** on a blank canvas using NumPy and OpenCV drawing functions.
 
 ---
 
@@ -32,6 +33,7 @@ Opencv project/
 │
 ├── Reading_photo.py       # Read and display a static image with rescaling
 ├── Reading_video.py       # Capture and display live webcam video with rescaling
+├── draw.py                # Draw shapes on a blank canvas using NumPy and OpenCV
 │
 ├── Photos/                # Folder containing image assets
 │   └── pc desk.jpg
@@ -92,6 +94,21 @@ Press **`d`** to stop the video capture and close the windows.
 
 ---
 
+### Draw Shapes on a Canvas
+
+```bash
+python draw.py
+```
+
+Creates a blank 500×500 black canvas and displays:
+- `Blank` — the original black canvas.
+- `Green` — the canvas filled with solid green.
+- `Rectangle` — a red rectangle drawn from the top-left corner `(0,0)` to `(250,250)`.
+
+Press any key to close all windows.
+
+---
+
 ## Features
 
 | Feature | Description |
@@ -100,6 +117,9 @@ Press **`d`** to stop the video capture and close the windows.
 | `changeRes(width, height)` | Changes the resolution of a live video capture stream via `capture.set()` |
 | Image Display | Displays both original and resized versions of an image side by side |
 | Live Video Capture | Captures frames from webcam in real-time and displays rescaled output |
+| Blank Canvas | Creates a black NumPy array as a drawable canvas using `np.zeros()` |
+| Colour Fill | Fills the entire canvas with a solid colour using array slicing |
+| Rectangle Drawing | Draws a rectangle on a canvas using `cv2.rectangle()` with custom position, colour, and thickness |
 
 ---
 
