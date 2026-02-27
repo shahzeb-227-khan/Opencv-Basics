@@ -54,10 +54,35 @@ Opencv project/
 
 1. **Clone or download** this repository to your local machine.
 
-2. **Install OpenCV** via pip:
+2. **Set up the environment and install packages.**
+
+   This project uses [**uv**](https://github.com/astral-sh/uv) — an incredibly fast Python package and virtual environment manager. It replaced the traditional `pip` + `venv` workflow and made everything significantly faster and easier to manage.
+
+   ### Recommended: using `uv` ⚡
 
    ```bash
-   pip install opencv-python
+   # Install uv (if not already installed)
+   pip install uv
+
+   # Create a virtual environment
+   uv venv
+
+   # Activate it
+   # Windows:
+   .venv\Scripts\activate
+   # macOS/Linux:
+   source .venv/bin/activate
+
+   # Install opencv-contrib-python (includes all extra modules)
+   uv pip install opencv-contrib-python
+   ```
+
+   > `opencv-contrib-python` was chosen over the base `opencv-python` because it includes the full set of **contrib** (extra/experimental) modules.
+
+   ### Alternative: using pip
+
+   ```bash
+   pip install opencv-contrib-python
    ```
 
 3. Place your images inside the `Photos/` folder and videos inside the `Videos/` folder.
@@ -131,3 +156,4 @@ Press any key to close all windows.
 - The default scale factor for `rescaleFrame` is **0.75** (75%). You can pass a custom value, e.g., `rescaleFrame(frame, scale=0.5)` for 50%.
 - `changeRes()` only works with **live video captures** (`cv2.VideoCapture`), not static images or pre-recorded video files.
 - Make sure the image path in `Reading_photo.py` matches the filename inside your `Photos/` folder.
+- **Package manager:** During this project, I discovered [**uv**](https://github.com/astral-sh/uv) as a replacement for `pip` + `venv`. It creates virtual environments and installs packages at blazing speed, and makes dependency management significantly more straightforward. Highly recommended for any Python project.
